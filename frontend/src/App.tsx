@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from '@/components/Login/Login'
-import Layout  from "./public/Layout";
+import Layout  from "./DashBoard/Layout";
 // import ProtectedRoute from '@/components/ProtectedRoute';
 
 function App() {

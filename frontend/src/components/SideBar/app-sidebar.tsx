@@ -1,16 +1,24 @@
-
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import items from './sideBarItems'
+} from "@/components/ui/sidebar";
+import {useNavigate} from 'react-router-dom'
+import items from "./sideBarItems";
+import { Button } from "../ui/button";
 export function AppSidebar() {
+  const navigate = useNavigate()
+
+  const CerrarSesion = ()=>{
+    navigate('/')
+  }
+
   return (
     <Sidebar>
       <SidebarContent>
@@ -32,6 +40,11 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarGroup>
+        <SidebarFooter >
+              <Button onClick={CerrarSesion}>Cerrar Sesión</Button>
+        </SidebarFooter>
+      </SidebarGroup>
     </Sidebar>
-  )
+  );
 }
